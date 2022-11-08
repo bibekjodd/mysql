@@ -101,3 +101,5 @@ select reverse(field_name) from table_name;
 
 -------- curdate()/curtime()/now() --------
 select date();
+
+
