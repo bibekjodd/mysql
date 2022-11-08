@@ -1,0 +1,103 @@
+Enter SQL => mysql -u root -p -h localhost;
+
+-------- create database --------
+-> create database database_name;
+
+
+-------- show all databases --------
+show databases;
+
+
+-------- drop database --------
+drop database bibek_db;
+
+
+-------- work on database --------
+use database_name;
+
+
+-------- create a new table --------
+create table table_name (field_name data_type null/not null , field_name data_type);
+create table table_name (field_name data_type null/not null default, primary key (field_name));
+create table table_name (field_name data_type null/not null auto_increment, primary key (field_name));
+
+
+-------- drop a table --------
+drop table table_name;
+
+
+-------- show columns of a table --------
+show columns from table_name;
+desc table_name;
+
+
+-------- insert into table --------
+insert into table_name (field,field,...field) values (value,value,...value);
+
+
+-------- add new field on a table --------
+alter table table_name add field_name
+
+
+-------- remove an existing field from a table --------
+alter table table_name drop column field_name
+
+
+
+-------- read operation --------
+select * from table_name;
+select fieldname,fieldname from table_name;
+select field_name from table_name where field_name =/>/</>=/<=!=between not between field_value;
+
+
+
+-------- update operation --------
+update table_name set field_name = field_value where field_name =/>/</>=/<=!=between not between field_value;
+
+
+-------- delete operation --------
+delete from table_name where field_name =/>/</>=/<=!=between not between field_value
+
+
+-------- select distinct --------
+select distinct field_name,field_name from table_name;
+
+
+-------- order by --------
+select * from table_name order by field_name;
+select distinct field_name from table_name orderby field_name;
+select distinct field_name from table_name orderby field_name  desc;
+
+
+
+-------- limit --------
+select * from table_name limit number;
+
+
+
+-------- like --------
+select * from table_name where field_name like '%<string>%';
+
+
+
+-------- Aggregate Functions --------
+select max(field_name) from table_name;
+select min(field_name) from table_name;
+select sum(field_name) from table_name;
+select avg(field_name) from table_name;
+
+
+
+-------- in --------
+select * from table_name where field_name in ('field_value','field_value');
+
+
+-------- concat --------
+select concat(field_name,' ',field_name) from table_name;
+
+-------- reverse/char_length/upper/lower --------
+select reverse(field_name) from table_name;
+
+
+-------- curdate()/curtime()/now() --------
+select date();
