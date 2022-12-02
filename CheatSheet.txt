@@ -103,3 +103,7 @@ select reverse(field_name) from table_name;
 select date();
 
 
+-------- Join --------
+select * from table_name,another_table_name where table_name.field_name = another_table_name.field_name;
+select * from table_name join another_table_name on table_name.field_name = another_table_name.field_name;
+select field_name(unique) | table_name.field_name from table_name join another_table_name on table_name.field_name = another_table_name.field_name;
